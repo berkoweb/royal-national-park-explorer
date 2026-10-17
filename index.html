@@ -519,11 +519,8 @@ function showHomeView(){
   window.scrollTo(0,0);
 }
 function goHome(){
-  if(history.state&&history.state.view==='detail'){history.back()}
-  else{
-    history.replaceState({view:'home'},'',location.pathname+location.search);
-    showHomeView()
-  }
+  history.replaceState({view:'home'},'',location.pathname+location.search);
+  showHomeView();
 }
 window.addEventListener('popstate',e=>{
   const s=e.state;
@@ -544,7 +541,8 @@ if(location.hash){
   }
 }else if(savedAppState&&savedAppState.view==='detail'&&savedAppState.detailId&&DATA.some(x=>x.id===savedAppState.detailId)){
   const id=savedAppState.detailId;
-  history.replaceState({view:'detail',id:id},'',`${location.pathname}${location.search}#${encodeURIComponent(id)}`);
+  history.replaceState({view:'home'},'',location.pathname+location.search);
+  history.pushState({view:'detail',id:id},'',`${location.pathname}${location.search}#${encodeURIComponent(id)}`);
   setTimeout(()=>openDetail(id,true),0);
 }else{
   history.replaceState({view:'home'},'',location.pathname+location.search);
