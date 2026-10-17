@@ -352,7 +352,7 @@ document.getElementById('searchClear').classList.toggle('show',q.length>0);
 const anyFilter=!!(q||f.area||f.distance||f.time||f.grade||f.format||state.active.size);
 const matchText=vis.length===1?'1 matching experience':`${vis.length} matching experiences`;
 document.getElementById('mobileSearchStatus').textContent='';
-document.getElementById('matchSummary').innerHTML=`<span>${matchText}</span><span class="mobile-hint">· <span class="down">↓</span> Results below map</span>`;
+document.getElementById('matchSummary').innerHTML=`<span>${matchText}</span><span class="mobile-hint">· <span class="down">↓</span> Results below</span>`;
 renderHomeMap(vis);
 setTimeout(()=>homeMap.invalidateSize(),0)
 }
