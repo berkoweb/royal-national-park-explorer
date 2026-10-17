@@ -11,13 +11,13 @@
 .hero{background:linear-gradient(145deg,#173f32,#2f6f57);color:white;padding:28px 20px 24px}.hero-inner{max-width:1500px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.13em;font-size:12px;font-weight:900;opacity:.75}h1{font-size:clamp(34px,5vw,62px);line-height:1;margin:6px 0 10px}.hero p{margin:0;max-width:820px;line-height:1.5;color:#e8f3ee}
 .shell{max-width:1500px;margin:auto;padding:16px}.toolbar{display:grid;grid-template-columns:minmax(260px,1.45fr) repeat(5,minmax(118px,.55fr)) auto;gap:9px;margin-bottom:10px}.control{background:white;border:1px solid var(--line);border-radius:13px;padding:10px 12px;min-height:46px}.control input,.control select{width:100%;border:0;outline:0;background:transparent}.clearbtn{border:0;background:var(--orange);color:white;border-radius:13px;padding:0 18px;font-weight:900;box-shadow:0 4px 12px rgba(163,79,37,.2)}.clearbtn:hover{background:#823d1c}
 .chips{display:flex;gap:8px;overflow:auto;padding:2px 0 14px;scrollbar-width:none}.chip{white-space:nowrap;border:1px solid var(--line);background:white;border-radius:999px;padding:9px 13px}.chip.active{background:var(--forest);border-color:var(--forest);color:white}
-.explore-layout{display:grid;grid-template-columns:minmax(520px,1.05fr) minmax(520px,.95fr);gap:15px;align-items:start}.mapbox{background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;position:sticky;top:10px}.maphead{padding:13px 15px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px}.maphead h2,.results-head h2{margin:0;font-size:17px}.small{font-size:12px;color:var(--muted)}#homeMap{height:70vh;min-height:570px}.place-label{background:rgba(255,255,255,.94);border:1px solid #b6c4bb;border-radius:6px;padding:3px 6px;font-size:11px;font-weight:900;color:#173f32;white-space:nowrap;box-shadow:0 2px 7px rgba(0,0,0,.08)}
-.results-head{display:flex;justify-content:space-between;align-items:center;padding:2px 2px 9px;gap:12px}.results-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.results-tools label{font-size:12px;font-weight:900;color:#5f6d66}.results-tools select{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 10px;font-weight:700;color:#173c30}.cards{display:grid;grid-template-columns:repeat(2,minmax(260px,1fr));gap:12px}.card{background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 5px 17px rgba(0,0,0,.055)}.thumb{height:170px;background:#dfe8e3}.thumb img{width:100%;height:100%;object-fit:cover;display:block}.card-body{padding:12px;display:flex;flex-direction:column;gap:8px}.area{font-size:11px;color:var(--muted);font-weight:900}.card h3{margin:0;font-size:19px;line-height:1.08}.meta{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.meta span{background:#f1f5f2;border-radius:10px;padding:8px;text-align:center;font-size:11px}.features{display:flex;flex-wrap:wrap;gap:5px}.feature{font-size:10px;border-radius:999px;padding:5px 7px;background:#edf3ef;color:#385046}.card p{font-size:12.5px;line-height:1.4;color:#45534d;margin:0}.actions{display:flex;gap:7px}.actions a,.actions button{flex:1;text-decoration:none;border:0;border-radius:10px;padding:10px;text-align:center;font-weight:900;background:#edf2ef;color:#173c30}.actions .primary{background:var(--forest);color:white}
+.explore-layout{display:grid;grid-template-columns:minmax(520px,1.05fr) minmax(520px,.95fr);gap:15px;align-items:stretch}.mapbox{background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;position:relative;min-height:100%}.maphead{padding:13px 15px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px}.maphead h2,.results-head h2{margin:0;font-size:17px}.small{font-size:12px;color:var(--muted)}#homeMap{height:calc(100% - 49px);min-height:650px}.place-label{background:rgba(255,255,255,.94);border:1px solid #b6c4bb;border-radius:6px;padding:3px 6px;font-size:11px;font-weight:900;color:#173f32;white-space:nowrap;box-shadow:0 2px 7px rgba(0,0,0,.08)}
+.results-head{display:flex;justify-content:space-between;align-items:center;padding:2px 2px 9px;gap:12px}.results-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap}.results-tools label{font-size:12px;font-weight:900;color:#5f6d66}.results-tools select{border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 10px;font-weight:700;color:#173c30}.cards{display:grid;grid-template-columns:repeat(2,minmax(260px,1fr));gap:12px}.top-results{min-width:0}.more-results{margin-top:16px}.more-results-head{display:flex;justify-content:space-between;align-items:end;padding:2px 2px 9px}.more-results-head h2{margin:0;font-size:17px}.cards-wide{grid-template-columns:repeat(4,minmax(0,1fr))}.cards-wide .thumb{height:165px}.cards-wide .card h3{font-size:18px}.cards-wide .card p{font-size:12px}.cards-wide .card-body{padding:11px}.cards-wide .actions a,.cards-wide .actions button{padding:10px 7px}.card{background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 5px 17px rgba(0,0,0,.055)}.thumb{height:170px;background:#dfe8e3}.thumb img{width:100%;height:100%;object-fit:cover;display:block}.card-body{padding:12px;display:flex;flex-direction:column;gap:8px}.area{font-size:11px;color:var(--muted);font-weight:900}.card h3{margin:0;font-size:19px;line-height:1.08}.meta{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.meta span{background:#f1f5f2;border-radius:10px;padding:8px;text-align:center;font-size:11px}.features{display:flex;flex-wrap:wrap;gap:5px}.feature{font-size:10px;border-radius:999px;padding:5px 7px;background:#edf3ef;color:#385046}.card p{font-size:12.5px;line-height:1.4;color:#45534d;margin:0}.actions{display:flex;gap:7px}.actions a,.actions button{flex:1;text-decoration:none;border:0;border-radius:10px;padding:10px;text-align:center;font-weight:900;background:#edf2ef;color:#173c30}.actions .primary{background:var(--forest);color:white}
 .detailpage{display:none}.detailpage.show{display:block}#home.hidden,.hero.hidden{display:none}.detail-top{max-width:1500px;margin:auto;padding:12px 16px 0}.back{border:0;background:white;padding:10px 13px;border-radius:11px;box-shadow:0 3px 12px rgba(0,0,0,.08)}.detail-wrap{max-width:1500px;margin:auto;padding:14px 16px 40px}.detail-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(420px,.92fr);gap:18px;align-items:start}.detail-left{min-width:0}.gallery-main{height:430px;border-radius:18px;overflow:hidden;background:#dfe8e3}.gallery-main img{width:100%;height:100%;object-fit:cover;display:block}.thumbs{display:flex;gap:8px;overflow:auto;margin-top:8px}.thumbs img{width:116px;height:76px;object-fit:cover;border-radius:10px;cursor:pointer;border:2px solid transparent}.thumbs img.active{border-color:var(--forest)}.photo-note{font-size:11px;color:#748078;margin-top:7px}
 .detail-card{background:white;border:1px solid var(--line);border-radius:18px;padding:18px}.detail-card h2{font-size:34px;line-height:1.03;margin:4px 0 8px}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}.fact{background:#f1f5f2;border-radius:11px;padding:10px;min-height:66px}.fact b{display:block;font-size:10px;color:#68756e;margin-bottom:3px}.grade-chat{background:#fff6e8}.confidence{border-left:4px solid #4e8069;background:#f2f7f4;padding:10px 12px;border-radius:9px;margin:12px 0;font-size:12px;color:#405249}.section{margin-top:18px}.section h4{margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#65736c}.section p{margin:0;line-height:1.55;color:#34443d}.detail-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.detail-actions a{padding:11px 14px;border-radius:11px;text-decoration:none;font-weight:900;background:var(--forest);color:white}.detail-actions a.secondary{background:#edf2ef;color:#173c30}
 .start-map-card{margin-top:14px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:white;position:relative}.start-map-card .label{padding:10px 12px;font-size:12px;font-weight:900;color:#53635b;border-bottom:1px solid var(--line)}.start-map-card iframe{display:block;width:100%;height:245px;border:0}.map-open-btn{position:absolute;left:12px;top:50px;z-index:5;background:white;color:#0b57d0;text-decoration:none;font-weight:800;font-size:13px;padding:9px 11px;border-radius:4px;box-shadow:0 2px 7px rgba(0,0,0,.2)}.start-map-card .below{padding:9px 12px;font-size:11px;color:#68756e;line-height:1.4}
 .route-card{margin-top:18px;background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden}.route-full{grid-column:1/-1}.route-card .route-head{padding:13px 15px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px;align-items:center}.route-card .route-head h2{font-size:17px;margin:0}.route-frame{width:100%;height:690px;border:0;display:block;background:#eef2ef}.route-footer{padding:11px 14px;border-top:1px solid var(--line);font-size:12px;color:#5e6c65;line-height:1.45}.route-footer a{font-weight:900;color:#174936}.no-route{padding:24px;color:#69766f}
-@media(max-width:1100px){.explore-layout,.detail-grid{grid-template-columns:1fr}.mapbox{position:relative;top:auto}#homeMap{height:52vh;min-height:430px}}
+@media(max-width:1250px) and (min-width:1101px){.cards-wide{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:1100px){.explore-layout,.detail-grid{grid-template-columns:1fr}.mapbox{position:relative;top:auto}#homeMap{height:52vh;min-height:430px}.more-results{display:none}}
 @media(max-width:760px){#contextMap{height:330px;min-height:300px}.results-head{align-items:flex-start;flex-direction:column}.results-tools{width:100%}.results-tools select{flex:1}.hero{padding:23px 14px 20px}.shell{padding:9px}.toolbar{grid-template-columns:1fr 1fr}.toolbar .search{grid-column:1/-1}.clearbtn{min-height:46px}.cards{grid-template-columns:1fr}.gallery-main{height:285px}.facts{grid-template-columns:1fr 1fr}.detail-card h2{font-size:29px}.route-frame{height:540px}}
 
 .context-card{margin-top:14px;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden}
@@ -26,7 +26,7 @@
 #contextMap{height:400px;min-height:360px;background:#e5ece8}
 .context-note{padding:10px 14px;border-top:1px solid var(--line);font-size:12px;color:#5f6d66;line-height:1.45}
 .context-pin{background:#173f32;color:#fff;border:3px solid #fff;border-radius:999px;width:22px;height:22px;box-shadow:0 2px 8px rgba(0,0,0,.28)}
-.context-place-label{background:rgba(255,255,255,.94);border:1px solid #b6c4bb;border-radius:6px;padding:3px 6px;font-size:11px;font-weight:900;color:#173f32;white-space:nowrap;box-shadow:0 2px 7px rgba(0,0,0,.08)}
+.context-place-label{background:rgba(30,79,104,.94);border:1px solid rgba(18,53,71,.95);border-radius:999px;padding:4px 8px;font-size:10px;font-weight:900;letter-spacing:.03em;color:#fff;white-space:nowrap;box-shadow:0 2px 7px rgba(0,0,0,.14);text-transform:uppercase}
 
 
 .notes-panel{margin-top:18px;background:white;border:1px solid var(--line);border-radius:18px;padding:16px}
@@ -114,6 +114,13 @@ button,a,select,input{-webkit-tap-highlight-color:transparent}
   #homeMap{min-height:330px}
 }
 
+
+.context-legend{display:flex;gap:14px;flex-wrap:wrap;padding:9px 14px;border-top:1px solid var(--line);font-size:11px;color:#5f6d66;background:#fafcfb}
+.context-legend span{display:flex;align-items:center;gap:6px}
+.legend-dot{display:inline-block;width:10px;height:10px;border-radius:50%}
+.legend-dot.key-place{background:#1e4f68}
+.legend-dot.experience{background:#173f32;border:2px solid #fff;box-shadow:0 0 0 1px #173f32}
+
 </style>
 </head>
 <body>
@@ -132,28 +139,40 @@ button,a,select,input{-webkit-tap-highlight-color:transparent}
 <button class="chip" data-filter="swimming">🏊 Swimming</button><button class="chip" data-filter="waterfall">💧 Waterfalls</button><button class="chip" data-filter="beach">🏖 Beaches</button><button class="chip" data-filter="views">🌊 Best scenery</button><button class="chip" data-filter="obscure">🧭 Obscure</button><button class="chip" data-filter="family">Family</button><button class="chip" data-filter="tide">Tide dependent</button><button class="chip" data-filter="boardwalk">Boardwalk</button><button class="chip" data-filter="rough">Rough terrain</button>
 </div>
 <section class="explore-layout">
-<div class="mapbox"><div class="maphead"><h2>Park map</h2><span class="small">Verified practical starting points</span></div><div id="homeMap"></div></div>
-<div>
-<div class="results-head">
-  <h2>Explore</h2>
-  <div class="results-tools">
-    <label for="sort">Sort by</label>
-    <select id="sort">
-      <option value="recommended">Recommended</option>
-      <option value="distance-asc">Distance · shortest first</option>
-      <option value="distance-desc">Distance · longest first</option>
-      <option value="time-asc">Time · shortest first</option>
-      <option value="time-desc">Time · longest first</option>
-      <option value="grade-asc">Difficulty · easiest first</option>
-      <option value="grade-desc">Difficulty · hardest first</option>
-      <option value="name-asc">Name · A–Z</option>
-      <option value="name-desc">Name · Z–A</option>
-    </select>
-    <span class="small" id="count"></span>
+  <div class="mapbox">
+    <div class="maphead"><h2>Park map</h2><span class="small">Verified practical starting points</span></div>
+    <div id="homeMap"></div>
   </div>
-</div>
-<div class="cards" id="cards"></div>
-</div>
+
+  <div class="top-results">
+    <div class="results-head">
+      <h2>Explore</h2>
+      <div class="results-tools">
+        <label for="sort">Sort by</label>
+        <select id="sort">
+          <option value="recommended">Recommended</option>
+          <option value="distance-asc">Distance · shortest first</option>
+          <option value="distance-desc">Distance · longest first</option>
+          <option value="time-asc">Time · shortest first</option>
+          <option value="time-desc">Time · longest first</option>
+          <option value="grade-asc">Difficulty · easiest first</option>
+          <option value="grade-desc">Difficulty · hardest first</option>
+          <option value="name-asc">Name · A–Z</option>
+          <option value="name-desc">Name · Z–A</option>
+        </select>
+        <span class="small" id="count"></span>
+      </div>
+    </div>
+    <div class="cards top-cards" id="cards"></div>
+  </div>
+</section>
+
+<section class="more-results" id="moreResults">
+  <div class="more-results-head">
+    <h2>More experiences</h2>
+    <span class="small" id="moreCount"></span>
+  </div>
+  <div class="cards cards-wide" id="moreCards"></div>
 </section>
 
 <section class="notes-panel">
@@ -184,6 +203,10 @@ button,a,select,input{-webkit-tap-highlight-color:transparent}
         </div>
       </div>
       <div id="contextMap"></div>
+      <div class="context-legend">
+        <span><i class="legend-dot key-place"></i>Key park place</span>
+        <span><i class="legend-dot experience"></i>Selected experience start</span>
+      </div>
       <div class="context-note" id="contextNote"></div>
     </div>
   </div>
@@ -252,10 +275,24 @@ case 'grade-desc': return (b.effectiveGrade??-1)-(a.effectiveGrade??-1);
 case 'name-asc': return a.name.localeCompare(b.name);
 case 'name-desc': return b.name.localeCompare(a.name);
 default: return b.priority-a.priority||a.timeMax-b.timeMax;
-}});document.getElementById('count').textContent=`${vis.length} of ${DATA.length}`;document.getElementById('cards').innerHTML=vis.map(card).join('');renderHomeMap(vis)}
+}});
+const desktop=window.innerWidth>1100;
+const top=desktop?vis.slice(0,4):vis;
+const rest=desktop?vis.slice(4):[];
+document.getElementById('count').textContent=`${vis.length} of ${DATA.length}`;
+document.getElementById('cards').innerHTML=top.map(card).join('');
+document.getElementById('moreCards').innerHTML=rest.map(card).join('');
+document.getElementById('moreCount').textContent=rest.length?`${rest.length} more`:'';
+document.getElementById('moreResults').style.display=desktop&&rest.length?'block':'none';
+renderHomeMap(vis);
+setTimeout(()=>homeMap.invalidateSize(),0)
+}
 document.querySelectorAll('.chip').forEach(btn=>btn.addEventListener('click',()=>{const k=btn.dataset.filter;state.active.has(k)?state.active.delete(k):state.active.add(k);btn.classList.toggle('active');render()}));
 ['search','area','distance','time','grade','format','sort'].forEach(id=>document.getElementById(id).addEventListener(id==='search'?'input':'change',render));
 document.getElementById('clearFilters').onclick=()=>{document.getElementById('search').value='';['area','distance','time','grade','format'].forEach(id=>document.getElementById(id).value='');document.getElementById('sort').value='recommended';state.active.clear();document.querySelectorAll('.chip').forEach(b=>b.classList.remove('active'));render()};
+let lastDesktopState=window.innerWidth>1100;
+window.addEventListener('resize',()=>{const now=window.innerWidth>1100;if(now!==lastDesktopState){lastDesktopState=now;render()}});
+
 window.setMainImage=(el,u)=>{document.getElementById('mainImage').src=u;document.querySelectorAll('#thumbs img').forEach(i=>i.classList.remove('active'));el.classList.add('active')};
 let contextMap=null, contextLayers=[];
 const CONTEXT_PLACES=[
