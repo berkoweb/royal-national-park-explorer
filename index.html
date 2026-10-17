@@ -177,6 +177,14 @@ button,a,select,input{-webkit-tap-highlight-color:transparent}
   border-right:2px solid #9CC7B3;
   border-bottom:2px solid #9CC7B3;
 }
+#homeMap .leaflet-popup-content{margin:16px 16px 14px;min-width:230px}
+.map-popup-start{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:#6a7a72;margin-bottom:8px}
+.map-popup-start strong{display:block;margin-top:3px;font-size:15px;line-height:1.25;letter-spacing:0;text-transform:none;color:#25342d}
+.map-popup-label{font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;color:#6f7f77;margin:2px 0 6px}
+.map-popup-experiences{display:flex;flex-direction:column;gap:7px}
+.map-popup-experience{width:100%;border:1px solid #cfe0d7;background:white;color:#173f32;border-radius:9px;padding:10px 11px;text-align:left;font-weight:900;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.map-popup-experience:after{content:'›';font-size:22px;line-height:1;color:#2f7d5d}
+.map-popup-experience:hover,.map-popup-experience:focus{background:#e7f1ec;border-color:#9cc7b3;outline:none}
 
 .card-open,.card-title-open{cursor:pointer}.card-title-open:hover{text-decoration:underline;text-underline-offset:3px}.card-open:focus-visible,.card-title-open:focus-visible{outline:2px solid #2f7d5d;outline-offset:3px;border-radius:6px}
 @media(max-width:760px){.hero-inner{padding-right:46px}.home-refresh{width:36px;height:36px;font-size:21px}.chip-rail-head{margin-bottom:4px}.chip-rail-head .swipe-cue{color:#476159}.chips{padding-bottom:9px}.match-summary{margin:4px 3px 7px;font-size:12px}.match-summary .mobile-hint{display:inline}.clear-row{margin-bottom:12px}.clear-row .clearbtn{width:100%}}
@@ -416,8 +424,8 @@ function initHomeMap(){homeMap=L.map('homeMap').setView([-34.145,151.065],11);co
 const places=[['BUNDEENA',-34.0837,151.1515],['MAIANBAR',-34.0795,151.1288],['AUDLEY',-34.0831,151.0572],['WATTAMOLLA',-34.1382,151.1158],['GARIE',-34.1702,151.0665],['OTFORD',-34.2110,151.0050],['HEATHCOTE',-34.0840,151.0070],['WATERFALL',-34.1355,150.9945]];
 places.forEach(p=>L.marker([p[1],p[2]],{interactive:false,icon:L.divIcon({className:'',html:`<div class="place-label">${p[0]}</div>`,iconSize:null})}).addTo(homeMap))}
 function renderHomeMap(vis){homeLayers.forEach(m=>homeMap.removeLayer(m));homeLayers=[];const groups={};vis.forEach(x=>{const key=x.startLat.toFixed(4)+','+x.startLon.toFixed(4);if(!groups[key])groups[key]=[];groups[key].push(x)});Object.values(groups).forEach(g=>{const x=g[0];
-let body=`<b>${esc(x.start)}</b><div style="margin-top:7px;display:flex;flex-direction:column;gap:5px">`+
-g.map(a=>`<button onclick="openDetail('${a.id}')" style="border:0;background:#edf2ef;color:#173c30;border-radius:7px;padding:6px 8px;text-align:left;font-weight:800;cursor:pointer">${esc(a.name)}</button>`).join('')+'</div>';
+let body=`<div class="map-popup-start">Starting point<strong>${esc(x.start)}</strong></div><div class="map-popup-label">${g.length===1?'Experience':'Experiences from here'}</div><div class="map-popup-experiences">`+
+g.map(a=>`<button class="map-popup-experience" onclick="openDetail('${a.id}')">${esc(a.name)}</button>`).join('')+'</div>';
 const m=L.marker([x.startLat,x.startLon],{
   icon:L.divIcon({
     className:'',
@@ -426,8 +434,7 @@ const m=L.marker([x.startLat,x.startLon],{
     iconAnchor:[15,31],
     popupAnchor:[0,-28]
   })
-}).addTo(homeMap).bindPopup(body,{maxWidth:320});
-if(g.length===1)m.on('click',()=>setTimeout(()=>openDetail(g[0].id),0));
+}).addTo(homeMap).bindPopup(body,{maxWidth:340});
 homeLayers.push(m)})}
 function render(){const f=currentFilters();const vis=DATA.filter(matches).sort((a,b)=>{
 switch(f.sort){
