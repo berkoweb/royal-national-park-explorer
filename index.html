@@ -354,6 +354,18 @@ function restoreSavedSession(){
   }
   return true;
 }
+function hasActiveFilters(){
+  const f=currentFilters();
+  return !!(document.getElementById('search').value.trim()||f.area||f.distance||f.time||f.grade||f.format||state.active.size);
+}
+function syncFilterButton(){
+  const active=hasActiveFilters();
+  const btn=document.getElementById('clearFilters');
+  if(!btn)return;
+  btn.classList.toggle('has-active-filters',active);
+  btn.textContent=active?'Active filters · Clear':'Clear filters';
+  btn.setAttribute('aria-label',active?'Clear active filters':'Clear filters');
+}
 function restoreFilters(saved){
   if(!saved||!saved.filters)return;
   const x=saved.filters;
@@ -366,6 +378,7 @@ function restoreFilters(saved){
   document.getElementById('sort').value=x.sort||'recommended';
   state.active=new Set(Array.isArray(x.active)?x.active:[]);
   document.querySelectorAll('.chip').forEach(b=>b.classList.toggle('active',state.active.has(b.dataset.filter)));
+  syncFilterButton();
 }
 function forceRefresh(){
   const u=new URL(window.location.href);
@@ -440,10 +453,7 @@ document.getElementById('moreResults').style.display=desktop&&rest.length?'block
 const q=document.getElementById('search').value.trim();
 document.getElementById('searchClear').classList.toggle('show',q.length>0);
 const anyFilter=!!(q||f.area||f.distance||f.time||f.grade||f.format||state.active.size);
-const clearBtn=document.getElementById('clearFilters');
-clearBtn.classList.toggle('has-active-filters',anyFilter);
-clearBtn.textContent=anyFilter?'Active filters · Clear':'Clear filters';
-clearBtn.setAttribute('aria-label',anyFilter?'Clear active filters':'Clear filters');
+syncFilterButton();
 const matchText=vis.length===1?'1 matching experience':`${vis.length} matching experiences`;
 document.getElementById('mobileSearchStatus').textContent='';
 document.getElementById('matchSummary').innerHTML=`<span>${matchText}</span><span class="mobile-hint">· <span class="down">↓</span> Results below</span>`;
@@ -588,9 +598,11 @@ if(explicitId&&DATA.some(x=>x.id===explicitId)){
   setTimeout(()=>openDetail(explicitId,true),0);
 }else if(!restoreSavedSession()){
   render();
+  syncFilterButton();
   history.replaceState({view:'home'},'',location.pathname+location.search);
   saveAppState('home',null);
 }
+setTimeout(syncFilterButton,0);
 </script>
 </body></html>
 <style>@media(min-width:761px){.detail-name{display:none}}</style>
