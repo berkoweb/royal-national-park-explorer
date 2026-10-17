@@ -429,8 +429,7 @@ function drawContextMap(x){
   marker.openPopup();
 
   document.getElementById('contextNote').innerHTML=
-    `<b>${esc(x.name)}</b> starts at <b>${esc(x.start)}</b>. `+
-    `This map deliberately stays at a consistent park-wide scale so you can compare its position with Bundeena, Maianbar, Wattamolla, Garie, Audley, Otford, Heathcote and Waterfall. Use the map control to switch between street/terrain and satellite.`;
+    `<b>${esc(x.name)}</b> starts at <b>${esc(x.start)}</b>.`;
 }
 
 function openDetail(id,fromHistory=false){const x=DATA.find(a=>a.id===id);if(!x)return;if(!fromHistory)history.pushState({view:'detail',id:id},'',`#${encodeURIComponent(id)}`);document.getElementById('hero').classList.add('hidden');document.getElementById('home').classList.add('hidden');document.getElementById('detailPage').classList.add('show');document.getElementById('detailRibbonTitle').textContent=x.name;
