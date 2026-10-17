@@ -1,0 +1,17 @@
+{
+  "name": "Royal National Park Explorer",
+  "short_name": "Royal Explorer",
+  "start_url": "/royal-national-park-explorer/",
+  "scope": "/royal-national-park-explorer/",
+  "display": "standalone",
+  "background_color": "#f3f5f1",
+  "theme_color": "#173f32",
+  "icons": [
+    {
+      "src": "/royal-national-park-explorer/apple-touch-icon.png?v=4",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
